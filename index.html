@@ -12,7 +12,7 @@
 </head>
 <body class="shower list">
 
-	<section class="slide" id="cover">
+		<section class="slide" id="cover">
 		<style>
 			#cover {
 				background: linear-gradient(135deg, #1a2a6c, #2a4bd7);
@@ -24,13 +24,27 @@
 				top: 40px; left: 60px; right: 60px;
 				display: flex;
 				justify-content: space-between;
+				align-items: flex-start;
 				gap: 40px;
 			}
 			#cover img {
 				width: 320px;
 				border-radius: 12px;
 			}
-			#cover .author { text-align: right; }
+			#cover .author {
+				text-align: right;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+			#cover .author i {
+				font-size: 18px;
+				color: #d0d8ff;
+			}
+			#cover .author b {
+				font-size: 20px;
+				color: #fff;
+			}
 			#cover h2 {
 				position: absolute;
 				bottom: 60px; left: 60px; right: 60px;
@@ -43,13 +57,56 @@
 		<div class="top">
 			<img src="pictures/servers.png" alt="ЦОД">
 			<div class="author">
-				<b>Маланьин Антон Олегович, ИУ3-31М</b><br>
 				<i>История появления, преимущества и риски использования</i>
+				<b>Маланьин Антон Олегович, ИУ3-31М</b>
 			</div>
 		</div>
 
 		<h2>Облачные технологии и центры обработки данных</h2>
 	</section>
+<section class="slide" id="concepts">
+		<style>
+			#concepts {
+				background: linear-gradient(135deg, #1a2a6c, #2a4bd7);
+				color: #fff;
+				padding: 40px 60px;
+			}
+			#concepts h2 { margin: 0 0 30px; }
+			#concepts .grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 24px;
+			}
+			#concepts .card {
+				background: rgba(255,255,255,.08);
+				border-left: 4px solid #7a94ff;
+				border-radius: 10px;
+				padding: 20px 24px;
+			}
+			#concepts .card h3 { margin: 0 0 8px; font-size: 22px; }
+			#concepts .card p { margin: 0; font-size: 16px; color: #d0d8ff; }
+		</style>
 
+		<h2>Ключевые понятия</h2>
+
+		<div class="grid">
+			<div class="card">
+				<h3>ЦОД</h3>
+				<p>Инженерная площадка с вычислительными ресурсами, системами хранения, сетью, электропитанием и охлаждением.</p>
+			</div>
+			<div class="card">
+				<h3>Виртуализация</h3>
+				<p>Разделение физических ресурсов между изолированными виртуальными машинами или контейнерами.</p>
+			</div>
+			<div class="card">
+				<h3>Облачный сервис</h3>
+				<p>Модель предоставления ИТ-ресурсов по сети по запросу, с эластичным масштабированием и измеримым потреблением.</p>
+			</div>
+			<div class="card">
+				<h3>Облако</h3>
+				<p>Совокупность вычислительных ресурсов, доступных через интернет по требованию и не требующих управления физической инфраструктурой.</p>
+			</div>
+		</div>
+	</section>
 </body>
 </html>
