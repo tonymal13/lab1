@@ -1,0 +1,54 @@
+{
+	"type": "module",
+	"name": "@shower/shower",
+	"description": "Shower HTML presentation engine",
+	"version": "3.4.1",
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": {
+		"name": "Vadim Makeev",
+		"email": "hi@pepelsbey.dev",
+		"url": "https://pepelsbey.dev"
+	},
+	"homepage": "https://github.com/shower/shower",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/shower/shower.git",
+		"directory": "packages/shower"
+	},
+	"bugs": {
+		"url": "https://github.com/shower/shower/issues"
+	},
+	"license": "MIT",
+	"keywords": [
+		"shower",
+		"presentation",
+		"template"
+	],
+	"files": [
+		"pictures/**",
+		"index.html",
+		"LICENSE.md",
+		"README.md"
+	],
+	"engines": {
+		"node": ">=22"
+	},
+	"dependencies": {
+		"@shower/core": "*",
+		"@shower/material": "*",
+		"@shower/ribbon": "*"
+	},
+	"devDependencies": {
+		"@shower/cli": "*"
+	},
+	"scripts": {
+		"pdf": "shower pdf",
+		"start": "shower serve",
+		"dev": "vite",
+		"bundle": "shower bundle --files '**' --files '!{docs,node_modules,slides}{,/**}' --files '!*.{md,toml,json}'",
+		"archive": "shower archive --files '**' --files '!{docs,node_modules,slides}{,/**}' --files '!*.{md,toml,json}'",
+		"pages": "shower pages --files '**' --files '!{docs,node_modules,slides}{,/**}' --files '!*.{md,toml,json}'"
+	}
+}
